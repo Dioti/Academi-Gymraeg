@@ -1,9 +1,8 @@
 INSERT INTO User (username, password, email, forename, permissions)
 VALUES
 	("eeu900", "admin_password", "eeu900@bangor.ac.uk", "Natasha", "admin"),
-    ("johnsmith", "password", "john.smith@gmail.com", "John", "user"),
-    ("janesmith", "anotherpassword", "jane.smith@hotmail.co.uk", "Jane", "user"),
-    ("bobbys", "otherpassword", "bSmith@gmail.com", "Robert", "user");
+    ("johnsmith", "password", "john.smith@gmail.com", "John", "instructor"),
+    ("janesmith", "another_password", "jane.smith@hotmail.co.uk", "Jane", "student");
     
 
 INSERT INTO English (word, type)
@@ -31,10 +30,3 @@ VALUES
     ("byd", "M", "noun"),
     ("bywyd", "M", "noun"),
     ("llaw", "F", "noun");
-    
-INSERT INTO Results (user_id, test_id, completionDate, score)
-VALUES
-	("1", "some test", "2019-04-21", 15),
-    ("1", "some other test", "2019-04-22", 20),
-    ("3", "some test", "2019-03-01", 17),
-    ("4", "some other test", "2019-04-17", 15);

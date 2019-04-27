@@ -22,24 +22,3 @@ CREATE TABLE IF NOT EXISTS Welsh (
     type VARCHAR(10) NOT NULL,
     PRIMARY KEY(welsh_id)
 ) ENGINE = INNODB;
-
-/*CREATE TABLE IF NOT EXISTS Dictionary (
-	dict_id INT AUTO_INCREMENT,
-    english VARCHAR(25) NOT NULL,
-    welsh VARCHAR(25) NOT NULL,
-    type VARCHAR(10) NOT NULL, -- allow expansion for verbs, etc.
-    PRIMARY KEY(dict_id),
-    FOREIGN KEY(english) REFERENCES English(word) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY(welsh) REFERENCES Welsh(word) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY(type) REFERENCES English(type) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = INNODB;*/
-
-CREATE TABLE IF NOT EXISTS Results (
-	results_id INT AUTO_INCREMENT,
-	user_id INT NOT NULL,
-    test_id VARCHAR(20) NOT NULL, -- TODO: reference Test table
-	completionDate DATE NOT NULL,
-	score INT NOT NULL,
-	PRIMARY KEY (results_id),
-	FOREIGN KEY (user_id) REFERENCES User (user_id) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = INNODB;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>uk.ac.bangor.eeu900</groupId>
 	<artifactId>academi-cymraeg</artifactId>
@@ -9,6 +9,11 @@
 	<packaging>war</packaging>
 
 	<dependencies>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.15</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -17,9 +22,9 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-		    <groupId>jstl</groupId>
-		    <artifactId>jstl</artifactId>
-		    <version>1.2</version>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
 		</dependency>
 	</dependencies>
 
@@ -62,7 +67,7 @@
 				</dependency>
 			</dependencies>
 			<properties>
-				<jdbc.url>jdbc:mysql://localhost:3306/javatech?serverTimezone=UTC</jdbc.url>
+				<jdbc.url>jdbc:mysql://localhost:3306/academi-cymraeg?serverTimezone=UTC</jdbc.url>
 				<jdbc.username>root</jdbc.username>
 				<jdbc.password>password123</jdbc.password>
 				<jdbc.driver>com.mysql.cj.jdbc.Driver</jdbc.driver>

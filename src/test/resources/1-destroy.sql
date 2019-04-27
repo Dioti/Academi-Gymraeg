@@ -1,6 +1,7 @@
 -- drop tables with foreign keys first ---
 -- (alternatively, drop foreign keys first) --
-USE javatech;
+CREATE DATABASE IF NOT EXISTS `academi-cymraeg`;
+USE `academi-cymraeg`;
 
 DROP TABLE IF EXISTS Results;
 DROP TABLE IF EXISTS Dictionary;
